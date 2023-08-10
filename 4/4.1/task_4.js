@@ -20,3 +20,18 @@ let user = {
   for (let prop in user) {
     alert( prop ); // name, surname, age
   }
+
+
+  // + sign code
+
+  let codes = {
+    "+49": "Germany",
+    "+41": "Switzerland",
+    "+44": "Great Britain",
+    // ..,
+    "+1": "USA"
+  };
+  
+  for (let code in codes) {
+    alert( +code ); // 49, 41, 44, 1
+  }
