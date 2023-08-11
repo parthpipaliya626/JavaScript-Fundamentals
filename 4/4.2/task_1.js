@@ -15,3 +15,6 @@ let user = {
   clone.name = "Pete"; // changed the data in it
   
   alert( user.name ); // still John in the original object
+
+
+  
