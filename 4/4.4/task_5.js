@@ -1,12 +1,27 @@
 // using this  in object literal
 
-function makeUser() {
+function makeUser0() {
     return {
         name: "Parth",
         ref: this
     };
 }
 
-let user = makeUser();
+ var user0 = makeUser0();
 
-console.log( makeUser().name ); // undefined
+console.log( makeUser0().name ); // undefined
+
+
+
+function makeUser() {
+    return {
+      name: "John",
+      ref() {
+        return this;
+      }
+    };
+  }
+  
+  let user = makeUser();
+  
+  console.log( user.ref().name ); // John
