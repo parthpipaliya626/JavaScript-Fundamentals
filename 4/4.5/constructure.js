@@ -65,3 +65,24 @@ function User(name) {
   
   console.log(user.name); // Jack
   console.log(user.isAdmin); // false
+
+
+//   That’s the main purpose of constructors – to implement reusable object creation code.
+
+
+
+
+// new function() { ... }
+
+//If we have many lines of code all about creation of a single complex object,
+//  we can wrap them in an immediately called constructor function, like this:
+
+// create a function and immediately call it with new
+let user1 = new function() {
+    this.name = "John";
+    this.isAdmin = false;
+  
+    // ...other code for user creation
+    // maybe complex logic and statements
+    // local variables etc
+  };
