@@ -9,13 +9,13 @@ class RailwayForm {
     }
 
     preview() {
-        console.log(this.name + ": Your form is for train number: " + this.trainno + "and your address is" + this.address)
+        console.log(this.name + ": Your form is for train number: "  + this.trainno + " and your address is " + this.address)
     }
 
     submit() {
         console.log(this.name + ": Your form is submitted for train number: " + this.trainno)
     }
-    
+
     cancel() {
         console.log(this.name + ": This form is cancelled for train number: " + this.trainnno)
         this.trainno = 0
@@ -26,7 +26,7 @@ class RailwayForm {
 
 // create & fill a form for parth
 
-let parthForm = new RailwayForm("Parth" , 354457, "Shivrajgadh , rajkot - 360311")
+let parthForm = new RailwayForm("Parth" , 354457, "Shivrajgadh, rajkot - 360311")
 
 // no need to fill the form with parth's details
 // parthForm.fill()
@@ -36,6 +36,7 @@ let rajuForm1 = new RailwayForm("Raju", 354458)
 let rajuForm2 = new RailwayForm("Raju", 354459)
 
 
+parthForm.preview()
 parthForm.submit()
 rajuForm1.submit()
 rajuForm2.submit()
