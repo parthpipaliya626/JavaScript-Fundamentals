@@ -1,6 +1,6 @@
 // using this  in object literal
 
-function makeUser0() {
+function makeUser() {
     return {
         name: "Parth",
         ref: this
@@ -9,7 +9,7 @@ function makeUser0() {
 
  var user0 = makeUser0();
 
-console.log( makeUser0().name ); // undefined
+console.log( makeUser().name ); // undefined
 
 
 
