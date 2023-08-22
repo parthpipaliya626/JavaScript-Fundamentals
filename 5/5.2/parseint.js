@@ -101,7 +101,7 @@ console.log( Math.pow(2, 10) ); // 2 in power 10 = 1024
       -  Round using Math.floor, Math.ceil, Math.trunc, Math.round or num.toFixed(precision).
       -   Make sure to remember there’s a loss of precision when working with fractions.
       
-      
+
       More mathematical functions:
 
       -  See the Math object when you need them. The library is very small, but can cover basic needs.
