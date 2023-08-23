@@ -70,9 +70,34 @@ console.log( str.at(-2) );      //  h
 
 
 
+let user = {
+    name: "John",
+    money: 1000,
+  
+    [Symbol.toPrimitive](hint) {
+      console.log(`hint: ${hint}`);
+      return hint == "string" ? `{name: "${this.name}"}` : this.money;
+    }
+  };
+
+  console.log(user); // hint: string -> {name: "John"}
+
+
+  // Strings are immutable
+
+  let str3 = 'Hi';
+
+  str3[0] = 'h';  // error
+  console.log( str3[0] );  //  H
 
 
 
+
+  let str4 = 'Hi';
+
+  str4 = 'h' + str4[1]; // replace the string
+  
+  console.log( str4 ); // hi
 
 
 
