@@ -35,5 +35,8 @@ console.log( str.slice(6, 2) ); // "" (an empty string)
 // str.substr(start [, length])
 
 
+ str = "stringify";
+console.log( str.substr(2, 4) ); // 'ring', from the 2nd position get 4 characters
 
-
+str = "stringify";
+console.log( str.substr(-4, 2) ); // 'gi', from the 4th position get 2 characters
