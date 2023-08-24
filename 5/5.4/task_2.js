@@ -11,3 +11,18 @@ arr.push("Pear"); // modify the array by reference
 
 console.log( fruits ); // Banana, Pear - 2 items now
 
+
+
+
+
+// Performance
+
+// Methods push/pop run fast, while shift/unshift are slow
+
+
+
+ fruits.pop();   // take 1 element from the end
+ console.log(fruits);      // [ 'Banana' ]
+
+
+
