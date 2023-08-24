@@ -32,4 +32,23 @@ console.log( "1" + 1 ); // "11"
 console.log( "1,2" + 1 ); // "1,21"
 
 
+// Don’t compare arrays with ==
 
+console.log( [] == [] ); // false
+console.log( [0] == [0] ); // false
+
+
+// after [] was converted to ''
+console.log( 0 == '' ); // true, as '' becomes converted to number 0
+
+console.log('0' == '' ); // false, no type conversion, different strings
+
+
+/*
+
+So, how to compare arrays?
+
+That’s simple: don’t use the == operator.
+  Instead, compare them item-by-item in a loop or using iteration methods explained in the next chapter.
+
+*/
