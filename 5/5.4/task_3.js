@@ -26,3 +26,40 @@ for (let key in arr) {
 }
 
 
+
+
+
+// A word about "length"
+// the length property automatically updates when we modify the array
+// a single element with a large index gives a big length:
+ fruits = [];
+fruits[123] = "Apple";
+
+console.log( fruits.length ); // 124
+
+
+// the array is truncated
+
+arr = [1, 2, 3, 4, 5];
+arr.length = 2;
+console.log( arr );       // [1, 2]
+
+arr.length = 5;
+console.log( arr[3] );      // undefined
+console.log( arr[0] );      // undefined
+console.log( arr.length );      // undefined
+
+
+
+// new Array()
+
+ arr = new Array(2); // will it create an array of [2] ?
+
+console.log( arr[0] );     // undefined! no elements.
+
+console.log( arr.length );     // length 2
+
+
+
+
+
