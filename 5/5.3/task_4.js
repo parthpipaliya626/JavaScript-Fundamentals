@@ -20,3 +20,6 @@ console.log( str.substr(-4, 2) ); // 'gi', from the 4th position get 2 character
 console.log( str.substr(-8, 2) ); // 'tr', from the 4th position get 2 characters
  str = "stringify";
 console.log( str.substr(4, 2) ); // 'ng', from the 4th position get 2 characters
+
+
+// in negetive like (-4, 2) -4 position chhele thi 2 position right side ni value count thase  
