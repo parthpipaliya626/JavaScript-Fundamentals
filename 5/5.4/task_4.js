@@ -15,3 +15,21 @@ let matrix = [
   console.log( matrix[2][0] ); // 7, the central element
   console.log( matrix[2][1] ); // 8, the central element
   console.log( matrix[2][2] ); // 9, the central element
+
+
+
+
+  // toString
+
+  let arr = [1, 2, 3];
+
+console.log( arr ); // 1,2,3
+console.log( String(arr) === '1,2,3' ); // true
+
+
+console.log( "" + 1 ); // "1"
+console.log( "1" + 1 ); // "11"
+console.log( "1,2" + 1 ); // "1,21"
+
+
+
