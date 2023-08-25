@@ -22,3 +22,18 @@ let result = arr.reduce((sum, current) => sum + current , 1 + 2);    // last num
 
 console.log(result); // 15
 
+
+
+/*  Array.isArray   */
+
+
+// typeof does not help to distiguish a pplain object from an array:
+
+console.log(typeof {});   //  object
+console.log(typeof []);   //  object    (same)
+
+
+// but Array.isArray method in a returns true if value is in array or otherwise false.
+console.log(Array.isArray({})); // false
+
+console.log(Array.isArray([])); // true
