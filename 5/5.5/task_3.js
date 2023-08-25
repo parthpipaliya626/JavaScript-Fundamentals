@@ -62,3 +62,5 @@ arr.sort();
 
 console.log( arr );  // 1, 15, 2
 
+
+// main perpose is compare each character to each other bydefault
