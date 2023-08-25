@@ -48,3 +48,20 @@ let arrayLike = {
 console.log( arr.concat(arrayLike) ); // 1,2,[object Object]
 
 
+/*
+
+    …But if an array-like object has a special Symbol.isConcatSpreadable property,
+      then it’s treated as an array by concat: its elements are added instead:
+
+*/
+
+arr = [1, 2];
+
+arrayLike = {
+ 0: "something",
+ 1: "else",
+ [Symbol.isConcatSpreadable]: true,
+ length: 2
+};
+
+console.log( arr.concat(arrayLike) ); // 1,2,something,else
