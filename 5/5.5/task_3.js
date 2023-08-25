@@ -64,3 +64,14 @@ console.log( arr );  // 1, 15, 2
 
 
 // main perpose is compare each character to each other bydefault
+
+
+// reverse
+// The method arr.reverse reverses the order of elements in arr.
+
+// For instance:
+
+arr = [1, 2, 3, 4, 5];
+arr.reverse();
+
+console.log( arr ); // 5,4,3,2,1
