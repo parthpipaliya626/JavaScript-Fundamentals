@@ -17,9 +17,10 @@
         <a href="#">Return Book</a>
         <a href="#">Issue/Renual</a>
         <div class="search-container">
-          <!-- <form action="#booklist">
-            <input type="text" placeholder="Search.." name="search" type="submit">
-          </form> -->
+            <form action="#">
+                <input type="text" placeholder="Search.." name="search">
+                <button id="search" type="submit"><i class="fa fa-search"></i></button>
+              </form>
         </div>
       </div>
 
@@ -40,14 +41,18 @@
         
         <h2>Books in Library</h2>
         <ul id="bookList"></ul>
+        
     </div>
 
 </body>
 </html>
 
+
+
+
 <script>
 
-const bookList = document.getElementById("bookList");
+    const bookList = document.getElementById("bookList");
     const addBookForm = document.getElementById("addBookForm");
 
     // Array to store book data
@@ -64,11 +69,21 @@ const bookList = document.getElementById("bookList");
     // Function to display books
     function displayBooks() {
         bookList.innerHTML = "";
+
+        // Display books from the books array
         books.forEach((book, index) => {
             const li = document.createElement("li");
-            li.innerHTML = `Title: "${book.title}"  Auther: "${book.author}"  Isbn: "${book.isbn}" <button onclick="removeBook(${index})">Remove</button>`;
+            li.innerHTML = `Title: "${book.title}"  Auther: "${book.author}"  Isbn: "${book.isbn}"   <button onclick="removeBook(${index})">Remove</button>`;
             bookList.appendChild(li);
         });
+
+        // Display books from the library array
+        // library.forEach((book) => {
+        //     const li = document.createElement("li");
+        //     const status = book.checkedOut ? "Checked Out" : "Available";
+        //     li.innerHTML = `Title: "${book.title}" Author: "${book.author}" ISBN: "${book.isbn}" Status: ${status}   <button onclick="removeBook(${index})">Remove</button> `;
+        //     bookList.appendChild(li);
+        // });
     }
 
     // Function to remove a book
@@ -96,7 +111,7 @@ const bookList = document.getElementById("bookList");
     // Initial display of books
     displayBooks();
 
-
+    
 
 
 
@@ -169,6 +184,7 @@ function addBookToLibrary(book){
 
 <!-- css style -->
 <style>
+   
     /* Add your CSS styles here */
     body {
         font-family: Arial, sans-serif;
@@ -191,7 +207,7 @@ function addBookToLibrary(book){
         padding: 20px;
     }
 
-    h1, search, button {
+    h1, search {
         text-align: center;
     }
     button {
@@ -243,6 +259,14 @@ function addBookToLibrary(book){
 
 
 /* top nav css style start home, about, contact, search */
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #e9e9e9;
@@ -253,7 +277,7 @@ function addBookToLibrary(book){
   display: block;
   color: black;
   text-align: center;
-  padding: 10px 16px;
+  padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -270,7 +294,6 @@ function addBookToLibrary(book){
 
 .topnav .search-container {
   float: right;
-
 }
 
 .topnav input[type=text] {
@@ -280,11 +303,11 @@ function addBookToLibrary(book){
   border: none;
 }
 
-.topnav .search-container.button {
+.topnav .search-container button {
   float: right;
-  padding: 0px 1px;
-  margin-top: 0px;
-  margin-right: 117px;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
   background: #ddd;
   font-size: 17px;
   border: none;
