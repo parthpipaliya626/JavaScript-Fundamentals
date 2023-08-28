@@ -30,5 +30,18 @@
 
 
 
+// String is iterable
 
- 
+// for..of loops over
+for (let char of "test") {
+    // triggers 4 times: once for each character
+    console.log( char ); // t, then e, then s, then t
+  }
+
+
+// for..of loop
+let str = '𝒳😂';
+for (let char of str) {
+    console.log( char ); // 𝒳, and then 😂
+}
+
