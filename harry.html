@@ -148,6 +148,7 @@ function Display() {
 }
 
 // Add methods to display prototype
+
 Display.prototype.add = function (book) {
     console.log("Adding to UI");
     tableBody = document.getElementById('tableBody');
@@ -184,7 +185,7 @@ Display.prototype.show = function (type, displayMessage) {
                         </div>`;
     setTimeout(function () {
         message.innerHTML = ''
-    }, 2000);
+    }, 2000);      // 2 second baad
 
 }
 
@@ -215,7 +216,7 @@ function libraryFormSubmit(e) {
     let book = new Book(name, author, type);
     console.log(book);
 
-    let display = new Display();
+    l et display = new Display();
 
     if (display.validate(book)) {
 
@@ -231,7 +232,8 @@ function libraryFormSubmit(e) {
     e.preventDefault();
 }
 
-</script> -->
+
+</script>   -->
 
 
 
