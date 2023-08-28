@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+</head>
+<body>
+    <h1>Library Management System</h1>
+    
+    <!-- Form to add a new book -->
+    <h2>Add a Book</h2>
+    <form id="addBookForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" required>
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" required>
+
+        <label for="isbn">Isbn:</label>
+        <input type="number" id="isbn" value="13" required>
+
+        <button type="submit">Add Book</button>
+    </form>
+    
+    <!-- List of Books -->
+    <h2>Books in Library</h2>
+    <ul id="bookList"></ul>
+
+</body>
+</html>
+
+
+<script>
+function createbook(title, auther, isbn) {
+          return { title, auther, isbn, checkedOut: false };
+}
+
+ // Initialize the library array with sample data
+
+ const library = [
+    createBook("To kill a Mockingbird", "Harper Lee", "978-0-06-112008-4"),
+    createBook("1984", "George Orwell", "978-0-452-28423-4"),
+    createBook("Brave New World", "Aldous Huxley", "978-0-06-085052-4"),
+ ];
+
+ // FUnction to find a book to the library
+  function addBookToLibrary(book) {
+    library.push(book);
+  }
+
+  // Function to find a book by its ISBN
+  function findBookByISBN(isbn) {
+    return library.find((book) => book.isbn === isbn);
+  }
+
+  // Function to check out a book by its ISBN
+
+  function checkoutBook(isbn) {
+    const book = findBookByISBN(isbn);
+    if (book) {
+        book.checkedOut = true;
+        console.log(`Checked out "${book.title}" by ${book.auther} `);
+    } else {
+        console.log(` Book with ISBN ${isbn} not found in the library. `);
+    }
+  }
+
+  // Function to find books by a specific author
+
+</script>
+
+
+
+
+
+ <script>
+    const bookList = document.getElementById("bookList");
+    const addBookForm = document.getElementById("addBookForm");
+
+    // Array to store book data
+    const books = [];
+
+    // Function to add a book
+    function addBook(title, author, isbn) {
+        const book = { title, author, isbn };
+        books.push(book);
+        displayBooks();
+        clearForm();
+    }
+
+    // Function to display books
+    function displayBooks() {
+        bookList.innerHTML = "";
+        books.forEach((book, index) => {
+            const li = document.createElement("li");
+            li.innerHTML = `Title: "${book.title}"  Auther: "${book.author}"  Isbn: "${book.isbn}" <button onclick="removeBook(${index})">Remove</button>`;
+            bookList.appendChild(li);
+        });
+    }
+
+    // Function to remove a book
+    function removeBook(index) {
+        books.splice(index, 1);
+        displayBooks();
+    }
+
+    // Function to clear the form
+    function clearForm() {
+        addBookForm.reset();
+    }
+
+    // Event listener for adding a book
+    addBookForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const title = document.getElementById("title").value;
+        const author = document.getElementById("author").value;
+        const isbn = document.getElementById("isbn").value;
+        if (title && author && isbn) {
+            addBook(title, author, isbn);
+        }
+    });
+
+    // Initial display of books
+    displayBooks();
+</script>
