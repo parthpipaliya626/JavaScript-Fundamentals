@@ -44,6 +44,10 @@ while (true) {
 //  arr = Array.from(range);
 // console.log(arr); // 1,2,3,4,5 (array toString conversion works)  // not defined
 
+
+
+
+
 // here we use Array.from to a string into an array of char:
  str = '𝒳😂';
 
@@ -55,3 +59,34 @@ console.log(chars[1]); // 😂
 console.log(chars.length); // 2
 
 
+// same as this
+
+ str = '𝒳😂';
+
+ chars = []; // Array.from internally does the same loop
+for (let char of str) {
+  chars.push(char);
+}
+
+console.log(chars);      // [ '𝒳' , '😂' ]
+// but it is shorter
+
+
+// slice on it
+
+
+
+function slice(str, start, end) {
+    return Array.from(str).slice(start, end).join('');
+  }
+  
+   str = '𝒳😂𩷶';
+  
+  console.log( slice(str, 1, 3) );   // 😂𩷶
+  
+  // the native method does not support surrogate pairs
+  console.log( str.slice(1, 3) ); // garbage (two pieces from different surrogate pairs) ��
+
+
+
+  
