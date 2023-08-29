@@ -15,7 +15,6 @@ const library = [];
 
 
 
-
 // Add books to the library using the createBook function
 library.push(createBook("To Kill a Mockingbird", "Harper Lee", "978-0-06-112008-4"));
 library.push(createBook("1984", "George Orwell", "978-0-452-28423-4"));

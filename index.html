@@ -13,16 +13,17 @@
 
     <div class="topnav">
         <a class="active" href="#index.html">Dashboard</a>
-        <a href="#about">Book Categories</a>
+        <a href="#">Book Categories</a>
         <a href="#">Return Book</a>
         <a href="#">Issue/Renual</a>
         <div class="search-container">
             <form action="#">
-                <input type="text" placeholder="Search.." name="search">
-                <button id="search" type="submit"><i class="fa fa-search"></i></button>
+                <input type="text" id="searchData" placeholder="Search.." name="search" onchange="findBooksByAuthor()">
+                <button id="search" type="button" onclick="findBooksByAuthor()"><i class="fa fa-search"></i></button>
               </form>
         </div>
       </div>
+
 
     
     <div class="container">
@@ -57,6 +58,7 @@
 
     // Array to store book data
     const books = [];
+    console.log(books);
 
     // Function to add a book
     function addBook(title, author, isbn) {
@@ -174,7 +176,11 @@ function addBookToLibrary(book){
 
  // Function to find books by a specific author
  function findBooksByAuthor(author) {
-    return library.filter((book) => book.author === author);
+    console.log(author)
+    var data = document.getElementById("searchData").value;
+     var x = books.filter((book) => book.author === data);
+     console.log(x);
+     return x;
  }
 
     </script>
