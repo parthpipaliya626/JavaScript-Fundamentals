@@ -19,7 +19,7 @@
         <div class="search-container">
             <form action="#">
                 <input type="text" id="searchData" placeholder="Search.." name="search" onchange="findBooksByAuthor()">
-                <button id="search" type="button" onclick="findBooksByAuthor()"><i class="fa fa-search"></i></button>
+                <button id="search" type="button" onsearch="findBooksByAuthor()"><i class="fa fa-search"></i></button>
               </form>
         </div>
       </div>
@@ -62,7 +62,7 @@
 
     // Function to add a book
     function addBook(title, author, isbn) {
-        const book = { title, author, isbn };
+        const book = { title, author, isbn, checkedOut: false };
         books.push(book);
         displayBooks();
         clearForm();
@@ -75,7 +75,7 @@
         // Display books from the books array
         books.forEach((book, index) => {
             const li = document.createElement("li");
-            li.innerHTML = `Title: "${book.title}"  Auther: "${book.author}"  Isbn: "${book.isbn}"   <button onclick="removeBook(${index})">Remove</button>`;
+            li.innerHTML = `Title: "${book.title}"  Author: "${book.author}"  Isbn: "${book.isbn} checkedOutStatus:${book.checkedOut}   <button onclick="removeBook(${index})">Remove</button>`;
             bookList.appendChild(li);
         });
 
@@ -87,6 +87,8 @@
         //     bookList.appendChild(li);
         // });
     }
+
+    function searchResult(){}
 
     // Function to remove a book
     function removeBook(index) {
@@ -176,10 +178,12 @@ function addBookToLibrary(book){
 
  // Function to find books by a specific author
  function findBooksByAuthor(author) {
-    console.log(author)
+ 
+    console.log("author------",author)
     var data = document.getElementById("searchData").value;
      var x = books.filter((book) => book.author === data);
      console.log(x);
+
      return x;
  }
 

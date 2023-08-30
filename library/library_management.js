@@ -10,9 +10,7 @@ function createBook (title, author, isbn) {
 }
 
 // Create an array library that will store all the book objects.
-
 const library = [];
-
 
 
 // Add books to the library using the createBook function
@@ -82,5 +80,5 @@ returnBook("978-0-452-28423-4");
 
 // console.log("Library contents:");
 
-console.log(library);
+// console.log(library);
 
