@@ -97,3 +97,22 @@ for (let user of set) {
   console.log(user.name); // Raju (then Pete and Mary)
 }
 
+
+
+
+/* Iteration over set */
+// we can use set after for..of or using  forEach
+ set = new Set(["oranges", "apples", "bananas"]);
+
+for (let value of set) console.log(value);
+
+// the same with forEach:
+set.forEach((value, valueAgain, set) => {
+  console.log(value);
+});
+
+
+/* set.keys()
+   set.values()
+   set.entries()
+    */
