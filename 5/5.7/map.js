@@ -63,3 +63,35 @@ visitsCountObj[john] = 123; // try to use john object as the key, ben object wil
 console.log( visitsCountObj["[object Object]"] ); // 123
 
 
+
+
+/*
+   Iteration over Map
+
+  For looping over a map, there are 3 methods:
+
+    --> map.keys() – returns an iterable for keys,
+    --> map.values() – returns an iterable for values,
+    --> map.entries() – returns an iterable for entries [key, value], it’s used by default in for..of.
+
+*/
+
+console.log("Starting new v.1 ~~~~~");    // new entry
+
+let recipeMap = new Map([
+    ['cucumber', 500],
+    ['tomatoes', 350],
+    ['onion', 50],
+]);
+
+for (let vegetables of recipeMap.keys()) {
+    console.log(vegetables);          // cucumber, tomatoes, onion
+}
+
+for (let amount of recipeMap.values()) {
+    console.log(amount);                  // 500, 350, 50
+}
+
+for (let entry of recipeMap) {
+    console.log(entry);    // [ 'cucumber', 500 ], [ 'tomatoes', 350 ], [ 'onion', 50 ]
+}
