@@ -56,6 +56,15 @@ class Book {
         const sum = this.ratings.reduce((acc, curr) => acc + curr, 0);
         return sum / this.ratings.length;   // calculate the average rating
     }
+
+
+    matchesQuery(query) {
+        const lowercaseQuery = query.toLowerCase();
+        return (
+            this.title.toLowerCase().includes(lowercaseQuery) ||
+            this.author.toLowerCase().includes(lowercaseQuery)
+        );
+    }
 }
 
 class Library {
@@ -87,7 +96,7 @@ class Library {
         const overdueBooks = [];
         for (const isbn in this.books) {
             const book = this.books[isbn];
-            if(book.isOverdue()) {
+            if (book.isOverdue()) {
                 overdueBooks.push(book);
             }
         }
@@ -112,6 +121,33 @@ class Library {
             return 0;
         }
     }
+
+    searchBooks(query) {
+        query = query.toLowerCase();
+        const matchingBooks = [];
+
+        for (const isbn in this.books) {
+            const book = this.books[isbn];
+            if (book.matchesQuery(query)) {
+                matchingBooks.push(book);
+            }
+        }
+
+        return matchingBooks;
+    }
+
+    sortLibrary(criteria) {
+        const sortedBooks = object.values(this.books).sort((a, b) => {
+            if (criteria === 'title') {
+                return a.title.localeCompare(b.title);
+            } else if (criteria === 'author') {
+                return a.author.localeCompare(b.author);
+            } else if (criteria === 'averageRating') {
+                return b.getAverageRating() - a.getAverageRating();
+            }
+        });
+        return sortedBooks;
+    }
 }
 
 // Usage example:
@@ -133,12 +169,32 @@ book1.rateBook(5); // Rate book1 with 5 stars
 // // Simulate an overdue book by setting a past dueDate
 // book2.dueDate = new Date("2023-08-01"); // Set a past dueDate for book2
 
-// console.log("Overdue Books:");
-// const overdueBooks = library.listOverdueBooks();
-// overdueBooks.forEach(book => console.log(`'${book.title}' by ${book.author}`));
+
+console.log("Overdue Books:");
+const overdueBooks = library.listOverdueBooks();
+overdueBooks.forEach(book => console.log(`'${book.title}' by ${book.author}`));
+
+//  rating
+
+// console.log(`Average rating for 'The Great Gatsby': ${library.getAverageRating("123456789").toFixed(2)}`);
+
+// console.log(`Average rating for 'To Kill a Mockingbird': ${library.getAverageRating("987654321").toFixed(2)}`);
 
 
 
-console.log(`Average rating for 'The Great Gatsby': ${library.getAverageRating("123456789").toFixed(2)}`);
+console.log("Books matching 'kill':");
+const matchingBooks = library.searchBooks("kill");
+matchingBooks.forEach(book => console.log(`'${book.title}' by ${book.author}`));
 
-console.log(`Average rating for 'To Kill a Mockingbird': ${library.getAverageRating("987654321").toFixed(2)}`);
+console.log("Sorted by title:");
+const sortedByTitle = library.sortLibrary('title');
+sortedByTitle.forEach(book => console.log(`'${book.title}' by ${book.author}`));
+
+console.log("Sorted by author:");
+const sortedByAuthor = library.sortLibrary('author');
+sortedByAuthor.forEach(book => console.log(`'${book.title}' by ${book.author}`));
+
+console.log("Sorted by average rating:");
+const sortedByRating = library.sortLibrary('averageRating');
+sortedByRating.forEach(book => console.log(`'${book.title}' by ${book.author}, Avg Rating: ${book.getAverageRating().toFixed(2)}`));
+
