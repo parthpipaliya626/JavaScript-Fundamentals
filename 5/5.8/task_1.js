@@ -28,4 +28,8 @@ let result2 = process(obj); // remembered result taken from cache
 // ...later, when the object is not needed any more:
 obj = null;
 
-console.log(cache.size); // 1 (Ouch! The object is still in cache, taking memory!
+console.log(cache.size);    // 1 (Ouch! The object is still in cache, taking memory!
+
+
+
+
