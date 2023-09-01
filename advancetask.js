@@ -1,4 +1,10 @@
 // Limit Number of Checkouts:
+/* scenario:
+    each book only 3 times checkedOut use const MAX_CHECKOUTS 
+      and use checkoutBook(isbn) to checked out each book 
+       and increment the count then MAX_CHECKOUTS limit over then
+        don't allow the checkout and inform the user 
+      */
 
 class Book {
     constructor( title, author, isbn ) {
@@ -7,15 +13,28 @@ class Book {
         this.author = author;
         this.isbn = isbn;
         this.checkoutCount = 0;
+        this.dueDate = null;      // Initialize dueDate to null 
     }
 
     checkoutBook() {
-        if (this.checkoutCount < Library.MAX_CHECKOUTS) {
+         if (this.checkoutCount < Library.MAX_CHECKOUTS) {
             this.checkoutCount++;
+
+            const dueDate = new Date();
+            dueDate.setDate(dueDate.getDate() + 14);     // checkout date to 14 days of Due date
+            this.dueDate = dueDate;                // set the duedate property
+
             console.log(`Checked out '${this.title}' by ${this.author} (ISBN: ${this.isbn})`);
-        } else {
+         } else {
             console.log(`Sorry, '${this.title}' has already been checked out ${Library.MAX_CHECKOUTS} times.`);
+         }
+    }
+
+    isOverdue() {
+        if (this.dueDate) {
+            return new Date() > new Date(this.dueDate);
         }
+        return false;
     }
 }
 
@@ -27,7 +46,12 @@ class Library {
     }
 
     addBook(book) {
-        this.books[book.isbn] = book;
+        if (this.books[book.isbn]) {
+            console.log(`A book with ISBN ${book.isbn} already exists.`);
+        } else {
+            this.books[book.isbn] = book;
+            console.log(`Added '${book.title}' by ${book.author} (ISBN: ${book.isbn}) to the library.`);
+        }
     }
 
     checkoutBook(isbn) {
@@ -39,11 +63,15 @@ class Library {
         }
     }
 
-    listBooks() {
+    listOverdueBooks() {
+        const overdueBooks = [];
         for (const isbn in this.books) {
             const book = this.books[isbn];
-            console.log(`'${book.title}' by ${book.author} (ISBN: ${book.isbn}) - Checked out ${book.checkoutCount} times`);
+            if(book.isOverdue()) {
+                overdueBooks.push(book);
+            }
         }
+        return overdueBooks;
     }
 }
 
@@ -56,13 +84,16 @@ const book2 = new Book( "Fighter & Actor", "Rock", "987654321" );
 library.addBook(book1);
 library.addBook(book2);
 
-library.checkoutBook("123456789");
-library.checkoutBook("123456789");
-library.checkoutBook("123456789");
-library.checkoutBook("123456789");  // This should inform the user that it can't be checked out again
+book1.checkoutBook(); // Checkout book1
+book1.checkoutBook(); // Checkout book1 again
 
-library.listBooks();
 
+// Simulate an overdue book by setting a past dueDate
+book2.dueDate = new Date("2023-08-01"); // Set a past dueDate for book2
+
+console.log("Overdue Books:");
+const overdueBooks = library.listOverdueBooks();
+overdueBooks.forEach(book => console.log(`'${book.title}' by ${book.author}`));
 
 
 
