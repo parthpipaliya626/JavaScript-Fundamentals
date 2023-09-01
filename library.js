@@ -149,6 +149,11 @@ function findBooksByAuthor(author) {
 5.) Find all books by a specific author.
 */
 //----------------------------------------------------------------------------------------------------------
+
+/*
+
+
+
 // case - 1
 console.log("Test Case 1: create a few books using createBook().");
 
@@ -189,3 +194,27 @@ console.log("Test Case 5: Find all books by a specific author.");
 
  console.table(findBooksByAuthor("Ved Vyas")); 
 //----------------------------------------------------------------------------------------------------------
+
+
+*/
+
+
+
+  // 
+ class Book {
+    constructor(isbn, title, author) {
+        this.isbn = isbn;
+        this.title = title;
+        this.author = author;
+        this.checkoutCount = 0;
+    }
+
+    checkoutBook() {
+        if (this.checkoutCount < library.MAX_CHECKOUTS) {
+            this.checkoutCount++;
+            console.log(`Checked out '${this.title}' by ${this.author} (ISBN: ${this.isbn})`);
+        } else {
+            console.log(`Sorry, '${this.title}' has already been checked out ${Library.MAX_CHECKOUTS} times.`);
+        }
+    }
+}
