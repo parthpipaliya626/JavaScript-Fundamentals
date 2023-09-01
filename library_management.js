@@ -120,7 +120,7 @@ const newbook2 = createBook ('NodeJs', 'Rajubhai', 12);
 console.log(newbook1);
 console.log(newbook2);
 //----------------------------------
-console.log();
+console.log();       // for maintain space in terminal in new case
 
 // case - 2
 console.log("Test Case 2: Add these books to the library.");
@@ -151,3 +151,5 @@ console.log("Test Case 5: Find all books by a specific author.");
 
  console.table(findBooksByAuthor("Ved Vyas")); 
 //----------------------------------------------------------------------------------------------------------
+
+
