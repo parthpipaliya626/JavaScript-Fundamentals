@@ -23,8 +23,10 @@ for (let value of Object.values(user)) {
        console.log(value);
 }
 
-
-
+// find all data of object in pairs [keys, values]
+for (let entry of Object.entries(user)) {
+    console.log(entry);
+}
 
 
 
