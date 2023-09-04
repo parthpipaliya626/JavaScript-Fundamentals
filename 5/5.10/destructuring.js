@@ -19,3 +19,9 @@ let [firstName, surname] = "John Smith".split(' ');
 console.log(firstName); // John
 console.log(surname);  // Smith
  
+
+let user = {};
+[user.name, user.surname] = "John Smith".split(' ');
+
+console.log(user.name); // John
+console.log(user.surname); // Smith
