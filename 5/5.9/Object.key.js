@@ -13,9 +13,16 @@ let user = {
     Status: true
 };
 
+// only key value find for use
 for (let key of Object.keys(user)) {
        console.log(key);
 }
+
+// use for original value of keys find
+for (let value of Object.values(user)) {
+       console.log(value);
+}
+
 
 
 
