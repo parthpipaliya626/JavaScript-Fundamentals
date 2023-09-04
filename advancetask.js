@@ -197,3 +197,8 @@ console.log("Sorted by average rating:");
 const sortedByRating = library.sortLibrary('averageRating');
 sortedByRating.forEach(book => console.log(`'${book.title}' by ${book.author}, Avg Rating: ${book.getAverageRating().toFixed(2)}`));
 
+
+
+
+
+
