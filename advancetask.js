@@ -4,8 +4,6 @@
       and use checkoutBook(isbn) to checked out each book 
        and increment the count then MAX_CHECKOUTS limit over then
         don't allow the checkout and inform the user 
-
-
       */
 
 class Book {
@@ -19,6 +17,7 @@ class Book {
         this.ratings = []; // Initialize ratings as an empty array
     }
 
+// Limit Number of Checkouts:
     checkoutBook() {
          if (this.checkoutCount < Library.MAX_CHECKOUTS) {
             this.checkoutCount++;
@@ -137,7 +136,7 @@ class Library {
     }
 
     sortLibrary(criteria) {
-        const sortedBooks = object.values(this.books).sort((a, b) => {
+        const sortedBooks = Object.values(this.books).sort((a, b) => {
             if (criteria === 'title') {
                 return a.title.localeCompare(b.title);
             } else if (criteria === 'author') {
