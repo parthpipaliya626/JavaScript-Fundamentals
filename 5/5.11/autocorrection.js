@@ -27,4 +27,5 @@ console.log( date );      // 2015-12-31T18:30:00.000Z
 
 date.setDate(0); // min day is 1, so the last day of the previous month is assumed
 console.log( date );     // 2015-12-30T18:30:00.000Z
-//  31 Dec 2015   really this output aavvu joye
+//  31 Dec 2015   really this output aavvu 
+
