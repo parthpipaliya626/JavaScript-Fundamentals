@@ -50,5 +50,31 @@ console.log(i--);
 
 
 
- 
+ let meetup = {
+    title: "Conference",
+    room: {
+        number: 23,
+        participants: ["john", "ann"]
+    }
+ };
 
+ console.log(JSON.stringify(meetup));    // all data in string
+
+
+
+ let room = {
+    number: 23
+ };
+
+  meetup = {
+    title: "Conference",
+    participants: ["john", "ann"]
+ };
+
+ meetup.place = room;
+ room.occupiedBy = meetup;
+
+ JSON.stringify(meetup);  // typeerror
+
+
+ 
