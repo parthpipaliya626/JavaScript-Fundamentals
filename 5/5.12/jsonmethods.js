@@ -46,7 +46,7 @@ console.log(i--);
     something: undefined
  };
 
- console.log(JSON.stringify(user));      // {}  (empty object because ignored all function properties)
+//  console.log(JSON.stringify(user));      // {}  (empty object because ignored all function properties)
 
 
 
@@ -58,7 +58,7 @@ console.log(i--);
     }
  };
 
- console.log(JSON.stringify(meetup));    // all data in string
+//  console.log(JSON.stringify(meetup));    // all data in string
 
 
 
@@ -77,10 +77,47 @@ let room = {
 
 room.occupiedBy = meetup;
 
+/*
 console.log( JSON.stringify(meetup, function replacer(key, value) {
     console.log(`${key}: ${value}`);
     return (key == 'occupiedBy') ? undefined : value;
 }) );
+*/
+
+
+user = {
+    name: "Raju",
+    age: 21,
+    roles: {
+        isAdmin: false,
+        isEditor: true
+    }
+};
+
+// console.log(JSON.stringify(user, null, 2));
+// console.log(JSON.stringify(user, null, 4));
+
+
+console.log("");
+
+
+room = {
+    number: 13
+};
+
+ meetup = {
+    title: "Conference",
+    date: new Date(Date.UTC(2021, 0, 1)),
+    room
+};
+
+console.log( JSON.stringify(meetup) );
 
 
 
+ room = {
+    number: 23,
+    toJSON() {
+      return this.number;
+    }
+  };
