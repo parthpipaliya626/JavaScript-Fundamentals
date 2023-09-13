@@ -62,19 +62,25 @@ console.log(i--);
 
 
 
- let room = {
-    number: 23
- };
 
-  meetup = {
+ // Excluding and transforming: replacer
+
+let room = { 
+    number: 12
+};
+
+ meetup = {
     title: "Conference",
-    participants: ["john", "ann"]
- };
+    participants: [{name: "Raju"}, {name: "Krunal"}],
+    place: room
+};
 
- meetup.place = room;
- room.occupiedBy = meetup;
+room.occupiedBy = meetup;
 
- JSON.stringify(meetup);  // typeerror
+console.log( JSON.stringify(meetup, function replacer(key, value) {
+    console.log(`${key}: ${value}`);
+    return (key == 'occupiedBy') ? undefined : value;
+}) );
 
 
- 
+
