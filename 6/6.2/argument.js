@@ -1,10 +1,8 @@
+// example- 1
 function showName() {
     console.log( arguments.length );
     console.log( arguments[0] );
     console.log( arguments[1] );
-  
-    // it's iterable
-    // for(let arg of arguments) console.log(arg);
   }
   
   // shows: 2, Julius, Caesar
@@ -14,14 +12,15 @@ function showName() {
   showName("Ilya");
 
 
+// example 2
   function f() {
     let showArg = () => console.log(arguments[0]);
     showArg();
   }
 
-  f(1);
+  f(8);       // 1
 
-
+console.log();
   // spread syntax
 
   let arr = [3, 5, 1];

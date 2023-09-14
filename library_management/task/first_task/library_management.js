@@ -96,9 +96,10 @@ console.log("Test Case 1: create a few books using createBook().");
 const newbook1 = createBook ('Javascript', 'Patelbhai', 123456);
 const newbook2 = createBook ('NodeJs', 'Rajubhai', 12);
 
-console.log(newbook1);
-console.log(newbook2);
-//----
+console.table(newbook1);                 // table format
+console.log(newbook2);                   // json format
+//-----------------------------------------------------------------
+
 console.log();       // for maintain space in terminal in new case
 
 // case - 2
@@ -107,7 +108,8 @@ console.log("Test Case 2: Add these books to the library.");
 addBookToLibrary (newbook1);
 addBookToLibrary (newbook2);
 console.table(library);
-// ------
+// ---------------------------------------------------------------
+
 console.log();
 
 // case - 3
@@ -115,7 +117,8 @@ console.log("Test Case 3: Check out a few books using their ISBNs.");
 
 checkoutBook(9788193935439);
 checkoutBook(100000000001);
-/// -----
+/// -------------------------------------------------------------------
+
 console.log();
 
 // case - 4
@@ -123,11 +126,13 @@ console.log("Test Case 4: Return a book.");
 
 returnBook(9788193935439);
 returnBook(100000000001);
-/// ------
+/// --------------------------------------------------------------------
+
 console.log();
 // case - 5
 console.log("Test Case 5: Find all books by a specific author.");
 
  console.table(findBooksByAuthor("Ved Vyas")); 
-//----------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------
 
+console.log();
