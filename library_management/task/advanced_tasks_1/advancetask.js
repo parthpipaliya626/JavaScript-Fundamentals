@@ -242,3 +242,5 @@ sortedByRating.forEach (book =>
       .toFixed (2)}`
   )
 );
+
+
