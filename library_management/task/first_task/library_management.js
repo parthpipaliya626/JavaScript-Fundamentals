@@ -20,8 +20,6 @@ const book4 = createBook ('Mahabharat', 'Ved Vyas', 445675491011);
 
 let library = [];
 
-// library = [createBook ('Mahabharat', 'Ved Vyas', '978-0735219090')];
-
 library = [
   {
     title: 'Panchtantra',
@@ -47,7 +45,6 @@ addBookToLibrary (book2);
 addBookToLibrary (book3);
 addBookToLibrary (book4);
 
-// console.log (library);       // all library data
 
 /* Checkout Book:  */
 function checkoutBook (isbn) {
@@ -61,14 +58,6 @@ function checkoutBook (isbn) {
     console.log (`Book with ISBN ${isbn} was not found.`);
   }
 }
-
-// calling function checkoutBook
-// checkoutBook(9788193935439);
-// checkoutBook(100000000001);
-// checkoutBook(445675491011);
-
-// library in all book data in table format
-// console.table(library);          // all library data with checkedout status
 
 /* Return Book: */
 
@@ -84,12 +73,6 @@ function returnBook (isbn) {
   }
 }
 
-// calling function returnBook
-// returnBook(9788193935439);
-
-// library in all book data in table format
-// console.table(library);      // all library data with return or not in table format
-// console.log(library);       // all library data with return or not in json format
 
 /* Find Book by Author: */
 
@@ -98,12 +81,15 @@ function findBooksByAuthor (author) {
 }
 
 const booksByAuthor = findBooksByAuthor ('Ved Vyas'); // enter proper name
-//  console.log(booksByAuthor);    // all data of author's book details in library
+
+  // console.table(booksByAuthor);    // all data of author's book details in library
 
 //----------------------------------------------------------------------------------------------------------
 /* Test Cases */
 
-/*
+console.log();                  // space
+
+
 // case - 1
 console.log("Test Case 1: create a few books using createBook().");
 
@@ -144,5 +130,4 @@ console.log("Test Case 5: Find all books by a specific author.");
 
  console.table(findBooksByAuthor("Ved Vyas")); 
 //----------------------------------------------------------------------------------------------------------
-*/
 

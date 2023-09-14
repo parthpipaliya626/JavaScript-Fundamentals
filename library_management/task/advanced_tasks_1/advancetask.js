@@ -12,8 +12,8 @@ class Book {
     this.author = author;
     this.isbn = isbn;
     this.checkoutCount = 0;
-    this.dueDate = null; // Initialize dueDate to null
-    this.ratings = []; // Initialize ratings as an empty array
+    this.dueDate = null; 
+    this.ratings = []; 
   }
 
   // Limit Number of Checkouts:
@@ -141,7 +141,7 @@ class Library {
       const book = this.books[isbn];
       return book.getAverageRating ();
     } else {
-      console.log (`Book with ISBN ${isbn} not found in the library.`);
+      console.log(`Book with ISBN ${isbn} not found in the library.`);
       return 0;
     }
   }

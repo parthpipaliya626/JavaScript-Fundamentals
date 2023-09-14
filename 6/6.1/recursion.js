@@ -67,4 +67,5 @@ function sumSalaries(department) {
 console.log(sumSalaries(company));     // 7700
 
 
-
+let a = Math.pow(2, 3);
+console.log(a);         // 8
