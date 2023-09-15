@@ -62,3 +62,22 @@ let message = "hello";
         console.log("Click count: " + localStorage.getItem('clickcount'));
     }
     
+
+
+    let value = "Surprise!";
+      function f() {
+        let value = "the closest value";
+
+        function g() {
+            debugger;
+        }
+
+        return g;
+      }
+
+      let g = f();
+      g();
+
+
+
+      
