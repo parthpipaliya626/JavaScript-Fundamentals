@@ -93,3 +93,38 @@ console.log( arr.slice(2, 3) );
 console.log( arr.slice(-2) );
 
 console.log(arr);
+
+
+
+ arr = [1, 2];
+
+console.log( arr.concat([3, 4]) ); // 1,2,3,4
+console.log( arr.concat([3, 4], [5, 6]) ); // 1,2,3,4,5,6
+console.log(arr);
+
+console.log( arr.concat([3, 4], 5, 6) ); // 1,2,3,4,5,6
+
+
+let str = "Hello";
+let iterator = str[Symbol.iterator]();
+
+while (true) {
+    let result = iterator.next();
+    if (result.done) break;
+    console.log(result.value); // outputs characters one by one
+  }
+
+
+
+
+  let options = {
+    title: "My menu",
+    items: ["Item1", "Item2"]
+  };
+
+  function showMenu({ title = "Untitled", width = 200, height = 100, items = [] }) {
+    console.log( `${title} ${width} ${height}` );
+    // console.log( items );
+  }
+
+  showMenu(options);
