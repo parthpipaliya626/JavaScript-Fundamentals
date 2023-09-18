@@ -80,4 +80,16 @@ let message = "hello";
 
 
 
+      console.log(g);
+
       
+
+
+let arr = ["t", "e", "s", "t"];
+console.log( arr.slice(1, 3) );
+console.log( arr.slice(0, 3) );
+console.log( arr.slice(2, 3) );
+
+console.log( arr.slice(-2) );
+
+console.log(arr);
