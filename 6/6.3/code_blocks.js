@@ -128,3 +128,15 @@ while (true) {
   }
 
   showMenu(options);
+
+
+
+  let name = "Raju";
+
+  function sayHi() {
+    console.log("Hi, "+ name);
+  }
+
+  name = "Utsav";
+
+  sayHi();
