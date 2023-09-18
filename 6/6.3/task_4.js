@@ -1,3 +1,5 @@
+// counter objects
+
 function Counter() {
     let count = 0;
   
@@ -17,4 +19,3 @@ function Counter() {
 
 
 
-  
