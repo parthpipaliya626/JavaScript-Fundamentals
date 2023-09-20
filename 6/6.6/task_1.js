@@ -5,6 +5,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+
 function ask(question, ...handlers) {
   rl.question(question + ' (yes/no): ', (answer) => {
     const isYes = answer.toLowerCase().trim() === 'yes';
@@ -12,13 +13,13 @@ function ask(question, ...handlers) {
     for (let handler of handlers) {
       if (handler.length === 0) {
         if (isYes) handler();
-      } else {
+    } else {
         handler(isYes);
       }
     }
-
+    
     rl.close();
-  });
+});
 }
 
 ask("Question?", () => console.log('You said yes'), result => console.log(result));

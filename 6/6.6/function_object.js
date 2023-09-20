@@ -52,3 +52,16 @@ function ask(question, ...handlers) {
 ask("Question?", () => console.log('You said yes'),  result => console.log(result));
 
 
+
+// custom properties
+
+function sayHello() {
+    console.log("hii");
+
+    sayHello.counter++;
+}
+
+sayHello.counter = 0;
+
+sayHello();
+sayHello();
