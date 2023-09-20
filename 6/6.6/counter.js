@@ -18,3 +18,25 @@ counter.count = 10;
 console.log( counter() );
 // console.log( counter() );
 
+
+
+
+
+let sayHi = function func(who) {
+    if (who) {
+        console.log(`Hello, ${who}`);
+    } else {
+        func("Guest");
+    }
+};
+
+
+let welcome = sayHi;
+
+sayHi = null;
+
+welcome();
+
+
+
+
