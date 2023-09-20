@@ -4,7 +4,8 @@ function createBook(title, author, isbn) {
              title: title,
              author: author,
              isbn: isbn,
-             checkedOut: false
+             checkedOut: false,
+             checkoutCount: 0,
     };
     return book;   
   } 
@@ -28,10 +29,23 @@ function createBook(title, author, isbn) {
 //   console.table(library);
   
   // Checkout Book
-  function checkoutBook(isbn) {
-    const book = library.find(book => {
+  // const MAX_CHECKOUTS = [3];
+
+    function checkoutBook(isbn) {
+        const book = library.find(book => book.isbn === isbn);
+    if (book) {
+        if(!book.checkedOut) {
+        // if(this.checkoutCount < library.MAX_CHECKOUTS) {
+    //         book.checkedOut = true;
+    //         this.checkoutCount++;
+
+    //         const dueDate = new Date();
+    //         dueDate.setDate(dueDate.getDate() + 14);
+    //         this.dueDate = dueDate;
+    //     }
+    }
       return book.isbn === isbn;
-      });
+      }
       if (book) {
         book.checkedOut = true;
         console.log(`Book with ISBN ${isbn} has been checked out.`);
@@ -57,6 +71,8 @@ function createBook(title, author, isbn) {
   function findBooksByAuthor(author) {
     return library.filter(book => book.author === author);
   }
+
+
 
 
 
@@ -94,3 +110,5 @@ console.log();
         console.log("Test 5: find book by author.");
         const booksByAuthor = findBooksByAuthor ('author1');
         console.table(booksByAuthor);
+
+
