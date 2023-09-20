@@ -65,3 +65,5 @@ sayHello.counter = 0;
 
 sayHello();
 sayHello();
+
+console.log(`Called ${sayHello.counter} times`);
