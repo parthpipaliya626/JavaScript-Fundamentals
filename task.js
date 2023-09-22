@@ -302,3 +302,4 @@ console.log(`Average Rating: ${book1.getAverageRating()}`);
 console.log();
 console.log(`Total Reviews:  ${book1.getTotalReviews()}`);
 console.log(`Filtered Reviews:`, book1.filterReviews(4, 'Great'));
+

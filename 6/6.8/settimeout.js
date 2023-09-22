@@ -24,13 +24,19 @@
 // // setTimeout("console.log('hello darling')", 2000);
 // setTimeout("console.log('Hello')", 1000);
 
-setTimeout( console.log('Hello'), 1000);
+// setTimeout( console.log('Hello'), 1000);
 
 
 
- 
+ // Cancelling with clearTimeout
+
+ let timerId = setTimeout(() => console.log("never happens"), 1000);
+console.log(timerId);
+
+clearTimeout(timerId);
+console.log(timerId);
 
 
 
 
-
+// setinterval
