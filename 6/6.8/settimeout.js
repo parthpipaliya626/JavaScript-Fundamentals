@@ -41,12 +41,18 @@
 
 // setinterval
 
-// repeat with the interval of 2 seconds
-let timerId = setInterval(() => console.log('tick'), 2000);
+// // repeat with the interval of 2 seconds
+// let timerId = setInterval(() => console.log('tick'), 2000);
 
-// after 5 seconds stop
-setTimeout(() => { clearInterval(timerId); console.log('stop'); }, 5000);
+// // after 5 seconds stop
+// setTimeout(() => { clearInterval(timerId); console.log('stop'); }, 5000);
 
 
+// Nested setTimeout
+
+let timerId = setTimeout(function tick() {
+  console.log('tick');
+  timerId = setTimeout(tick, 2000);
+}, 2000);
 
 
