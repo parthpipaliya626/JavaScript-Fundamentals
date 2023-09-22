@@ -50,9 +50,15 @@
 
 // Nested setTimeout
 
-let timerId = setTimeout(function tick() {
-  console.log('tick');
-  timerId = setTimeout(tick, 2000);
+// let timerId = setTimeout(function tick() {
+//   console.log('tick');
+//   timerId = setTimeout(tick, 2000);
+// }, 2000);
+
+setTimeout(() => {
+    console.log("Hello")
 }, 2000);
+
+
 
 
