@@ -30,13 +30,23 @@
 
  // Cancelling with clearTimeout
 
- let timerId = setTimeout(() => console.log("never happens"), 1000);
-console.log(timerId);
+//  let timerId = setTimeout(() => console.log("never happens"), 1000);
+// console.log(timerId);
 
-clearTimeout(timerId);
-console.log(timerId);
+// clearTimeout(timerId);
+// console.log(timerId);
 
 
 
 
 // setinterval
+
+// repeat with the interval of 2 seconds
+let timerId = setInterval(() => console.log('tick'), 2000);
+
+// after 5 seconds stop
+setTimeout(() => { clearInterval(timerId); console.log('stop'); }, 5000);
+
+
+
+
