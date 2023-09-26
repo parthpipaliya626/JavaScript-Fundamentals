@@ -1,16 +1,10 @@
 /* Student Grade Management  */
 
 const students = [
-    {
-         id: 1, name: 'Parth', scores: [90, 90, 98, 92],
-    },
-    {
-         id: 2, name: 'Dhruvik', scores: [78, 86, 80, 88],
-    },
-    {
-         id: 3, name: 'Urva', scores: [92, 94, 80, 96],
-    }              
-];
+          { id: 1, name: 'Parth', scores: [90, 90, 98, 92] },
+          { id: 2, name: 'Dhruvik', scores: [78, 86, 80, 88] },
+          { id: 3, name: 'Urva', scores: [92, 94, 80, 96] }              
+    ];
 
 //----------------------------------------------------------------------------------------------
 
@@ -26,29 +20,12 @@ const averageStudents = students.reduce((acc, student) => {
      const average = sum / student.scores.length;
      console.log(average);          // print average of each student
      acc[student.name] = average;
-     // console.log(typeof acc);
      return acc;
 }, {});
 
 // here, log average score for each student
  console.log();       // space maintain in terminal
 console.log(averageStudents);       // student name with averagescore in object
-
-/*
-// console.log('Average score for each student: ' );
-// for (const [name, average] of Object.entries(averageStudents)) {
-//      console.log(`${name} = ${average}`);
-// }
-*/
-
-/* 
-console.table('Average score for each student: ' );
- for (const name of Object.entries(averageStudents)) {
-     console.log(name);
-}
-
-*/
-
 
 //----------------------------------------------------------------------------------------------
 console.log();
@@ -77,6 +54,14 @@ console.log(studenthighScores);
 
 console.log();
 console.log("Task - 4 : Use reduce to find the student with the highest average score");
+
+// // Calculate the average score for each student.
+// const averageStudents = students.reduce((acc, student) => {
+//      const sum = student.scores.reduce((sum, score) => sum + score, 0);
+//      const average = sum / student.scores.length;
+//      acc[student.name] = average;
+//      return acc;
+//    }, {});
 
 const highestAverageScore = Object.entries(averageStudents).reduce((acc, [name, average]) => {
      if (average > acc.average) {
@@ -114,6 +99,15 @@ console.log(students);
 console.log();
 console.log("Test - 7 : Sort the students by their average scores in descending order and log the sorted list. ");
 
+// Calculate the average score for each student.
+
+// const averageStudents = students.reduce((acc, student) => {
+//      const sum = student.scores.reduce((sum, score) => sum + score, 0);
+//      const average = sum / student.scores.length;
+//      acc[student.name] = average;
+//      return acc;
+//    }, {});
+
 const sortedStudents = students.sort((studentA, studentB) => {
      const averageA = averageStudents[studentA.name];
      const averageB = averageStudents[studentB.name];
@@ -125,10 +119,19 @@ console.log(sortedStudents);
 
 
 //----------------------------------------------------------------------------------------------
-
-/* task - 8 : Use forEach to print a congratulatory message for each student who scored above 95.
-    ==>> 
-*/
+console.log();
+console.log("task - 8 : Use forEach to print a congratulatory message for each student who scored above 95.");
 
 
+
+// const highestScores = students.map((student) => ({
+//      name: student.name,
+//      highestScores: Math.max(...student,scores),
+// }));
+
+highestScores.forEach((student) => {
+     if (student.highestScores > 95) {
+          console.log(`Congretulations to ${student.name} for scoring ${student.highestScores} on the test!`);
+     }
+});
 
