@@ -90,7 +90,9 @@ console.log();
 console.log("Test - 6 : Remove a student with a specific ID from the array.");
 
 const studentIndex = students.findIndex((student) => student.id === 4);    // remove id number
-students.splice(studentIndex, 1)   // how many id delete from 4
+console.log(studentIndex);
+console.log(students.splice(studentIndex, 1), "----------------------------" )  // how many id delete from 4
+
 console.log(students);
 
 
@@ -134,4 +136,6 @@ highestScores.forEach((student) => {
           console.log(`Congretulations to ${student.name} for scoring ${student.highestScores} on the test!`);
      }
 });
+
+// ----------------------------------------------------------------
 
