@@ -35,14 +35,14 @@ function createBook(title, author, isbn) {
         const book = library.find(book => book.isbn === isbn);
     if (book) {
         if(!book.checkedOut) {
-        // if(this.checkoutCount < library.MAX_CHECKOUTS) {
-    //         book.checkedOut = true;
-    //         this.checkoutCount++;
+        if(this.checkoutCount < library.MAX_CHECKOUTS) {
+            book.checkedOut = true;
+            this.checkoutCount++;
 
-    //         const dueDate = new Date();
-    //         dueDate.setDate(dueDate.getDate() + 14);
-    //         this.dueDate = dueDate;
-    //     }
+            const dueDate = new Date();
+            dueDate.setDate(dueDate.getDate() + 14);
+            this.dueDate = dueDate;
+        }
     }
       return book.isbn === isbn;
       }
