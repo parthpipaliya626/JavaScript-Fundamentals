@@ -31,3 +31,24 @@ let worker = {
 //   console.log( worker.slow(2) )   // error
 
 
+
+
+function sayHi() {
+  console.log(this.name);
+}
+
+let user = { name: "Raju" };
+let admin = { name: "Utsav" };
+
+sayHi.call( user );
+sayHi.call( admin );
+
+
+function say(phrase) {
+  console.log(this.name + ':' + phrase);
+}
+let user1 = { name : "Krunal" };
+say.call( user1, "Hello" );
+
+
+

@@ -7,10 +7,36 @@ let students = [
   },
 ];
 
-students.sort ((a, b) => {
-  return array.forEach(element => {
+// students.sort ((a, b) => {
+//   return array.forEach(element => {
     
-  });(a.age - b.age);
+//   });(a.age - b.age);
   
-});
+// });
 
+
+// const total = students.reduce((acc, Age) => acc + Age.age, 0);
+// console.log(total);
+
+
+
+
+
+/// closure 
+
+
+
+      // function makeFunc() {
+      //     const name = "Mozilla";
+      //     function displayName() {
+      //       console.log(name);
+      //     }
+      //     return displayName;
+      // }
+
+      // const myFunc = makeFunc();
+      // myFunc();
+
+
+
+ 
