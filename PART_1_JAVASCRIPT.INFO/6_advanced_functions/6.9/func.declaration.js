@@ -18,15 +18,17 @@ let worker = {
       if (cache.has(x)) {
         return cache.get(x);
       }
-      let result = func(x); // (**)
+      let result = func.call(this, x); // (**)
       cache.set(x, result);
       return result;
     };
   }
   
-  console.log( worker.slow(1) ); // the original method works
-  
   worker.slow = cachingDecorator(worker.slow); // now make it caching
+  console.log( worker.slow(1) ); // the original method works
+  console.log( worker.slow(1) ); // works, 
+  
+  // worker.slow = cachingDecorator(worker.slow); // now make it caching
   
 //   console.log( worker.slow(2) )   // error
 
@@ -49,6 +51,19 @@ function say(phrase) {
 }
 let user1 = { name : "Krunal" };
 say.call( user1, "Hello" );
+
+
+
+////////  func.apply
+
+
+
+
+
+
+
+
+
 
 
 
