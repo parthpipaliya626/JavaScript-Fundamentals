@@ -42,3 +42,6 @@ let group = {
   
   let sayHiDeferred = defer(sayHi, 2000);
   sayHiDeferred("John"); // Hello, John after 2 seconds
+
+
+  
