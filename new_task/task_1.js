@@ -6,7 +6,7 @@
     Time to complete this task : 30 mins
 */
 
-
+/*
 function hello() {
     input.reduce((acc, value) => {
         const result = acc + value;
@@ -24,9 +24,39 @@ function hello() {
 
 //  input.sort(for( ));
  console.log(input.toString());
+*/
 
 
 
 
 
-
+ function sortByCount(inputString) {
+    // Step 1: Calculate the character counts
+    const charCount = {};
+    for (let char of inputString.toLowerCase()) {
+      if (/[a-z]/.test(char)) {
+        charCount[char] = (charCount[char] || 0) + 1;
+      }
+    }
+  
+    // Step 2: Convert the character counts to an array of objects
+    const charCountArray = [];
+    for (let char in charCount) {
+      charCountArray.push({ [char]: charCount[char] });
+    }
+  
+    // Step 3: Sort the array by the count in descending order
+    charCountArray.sort((a, b) => Object.values(b)[0] - Object.values(a)[0]);
+  
+    // Step 4: Print the total input string length
+    console.log("Total input string length:", inputString.length);
+  
+    // Step 5: Return the sorted array
+    return charCountArray;
+  }
+  
+  // Example usage:
+  const input = "Abra ka dabra";
+  const result = sortByCount(input);
+  console.log(result);
+  
