@@ -29,7 +29,7 @@ function hello() {
 
 
 
-
+/*
  function sortByCount(inputString) {
     // Step 1: Calculate the character counts
     const charCount = {};
@@ -56,7 +56,30 @@ function hello() {
   }
   
   // Example usage:
-  const input = "Abra ka dabra";
+  const input = "Abra ka= dabra";
   const result = sortByCount(input);
   console.log(result);
   
+
+*/
+
+
+
+
+
+  function countAndSortCharacters(inputString) {
+    const charCount = {};
+    for (let char of inputString.toLowerCase()) {
+      if (/[a-z]/.test(char)) {
+        charCount[char] = (charCount[char] || 0) + 1;
+      }
+    }
+
+    const charCountAArray = [];
+    for (let char in charCount){
+      charCountAArray.push({ [char]: charCount[char] });
+    }
+
+    charCountAArray.sort((a, b) => Object.values(b)[0] - Object.values(a)[0])
+  }
+

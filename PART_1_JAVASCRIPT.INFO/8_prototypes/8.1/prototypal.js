@@ -30,7 +30,7 @@ rabbit.walk();    // Animal walk
 
 
 
-
+/* 
 
 let animal = {
     eats: true,
@@ -52,6 +52,7 @@ let longEar = {
 longEar.walk();    // Animal walk
 console.log(longEar.jumps);     // true
 
+ */
 
 
 
