@@ -52,10 +52,10 @@ function hello() {
     return charCountArray;
   }
   
-  // Example usage:
-  const input = "Abra ka= dabra";
-  const result = sortByCount(input);
-  console.log(result);
+  // // Example usage:
+  // const input = "Abra ka= dabra";
+  // const result = sortByCount(input);
+  // console.log(result);
    */
 
 // function countAndSortCharacters(inputString) {
@@ -84,7 +84,7 @@ function hello() {
 
 function countArra (s) {
   let str = s.toLowerCase();
-  let arr = str.split("");
+  let arr = str.split("");    // ["a", "b"]
   let newArr = [];
   let newObj = {};
 
@@ -94,8 +94,24 @@ function countArra (s) {
     }
   }
 
+  let arrr = []
+  for(let char of str){
+    console.log(char);
+    if(!arrr[char]){
+      console.log("I am new")
+      arrr[char] = 1;
+    } else {
+      console.log("I m old")
+      arrr[char] = arrr[char] +1
+    }
+  }
+  console.log(arrr, "*****************");
+
   newArr.push(newObj);
   console.log(newArr);
+  console.log(arr.length);
+
 }
 
 countArra ('Abra ka dabra');
+// countArra.length;
