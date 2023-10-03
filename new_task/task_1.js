@@ -26,10 +26,7 @@ function hello() {
  console.log(input.toString());
 */
 
-
-
-
-/*
+/* 
  function sortByCount(inputString) {
     // Step 1: Calculate the character counts
     const charCount = {};
@@ -59,27 +56,46 @@ function hello() {
   const input = "Abra ka= dabra";
   const result = sortByCount(input);
   console.log(result);
-  
+   */
 
+// function countAndSortCharacters(inputString) {
+//   const charCount = {};
+//   for (let char of inputString.toLowerCase()) {
+//     if (/[a-z]/.test(char)) {
+//       charCount[char] = (charCount[char] || 0) + 1;
+//     }
+//   }
+
+//   const charCountAArray = [];
+//   for (let char in charCount){
+//     charCountAArray.push({ [char]: charCount[char] });
+//   }
+
+//   charCountAArray.sort((a, b) => Object.values(b)[0] - Object.values(a)[0])
+// }
+
+/*Task 1
+    Create function that Accepts the String as a input and return the Array of Object sorted by the number of count.
+    Input: Abra ka dabra
+    Output1: Print Total input string length
+    Output2: [{ a: 5 }, { b: 2 }, { r: 2 }, { d: 1 }, { k: 1 }];
+    Time to complete this task : 30 mins
 */
 
+function countArra (s) {
+  let str = s.toLowerCase();
+  let arr = str.split("");
+  let newArr = [];
+  let newObj = {};
 
-
-
-
-  function countAndSortCharacters(inputString) {
-    const charCount = {};
-    for (let char of inputString.toLowerCase()) {
-      if (/[a-z]/.test(char)) {
-        charCount[char] = (charCount[char] || 0) + 1;
-      }
+  for (let i = 0; i < arr.length; i++) {
+    if ( arr[i] !== ' ') {
+      !newObj[arr[i]] ? newObj[arr[i]] = 1 : newObj[arr[i]]++;
     }
-
-    const charCountAArray = [];
-    for (let char in charCount){
-      charCountAArray.push({ [char]: charCount[char] });
-    }
-
-    charCountAArray.sort((a, b) => Object.values(b)[0] - Object.values(a)[0])
   }
 
+  newArr.push(newObj);
+  console.log(newArr);
+}
+
+countArra ('Abra ka dabra');

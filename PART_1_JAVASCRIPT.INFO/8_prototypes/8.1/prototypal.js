@@ -57,13 +57,55 @@ console.log(longEar.jumps);     // true
 
 
 
+/* // Writing doesn't use prototype
+
+
+let animal = {
+    eats: true,
+    walk() {
+
+    }
+};
+
+let rabbit = {
+    __proto__: animal
+};
+
+rabbit.walk = function() {
+    console.log("Rabbit! Bounce-bounce!");
+};
+
+rabbit.walk();    // Rabbit! Bounce-bounce!
+ */
 
 
 
 
+    let user = {
+        name: "Parth",
+        surname: "Pipaliya",
 
+        set fullName(value) {
+            [this.name, this.surname] = value.split(" ");
+        },
 
+        get fullName() {
+            return ` ${this.name} ${this.surname} `;
+        }
+        
+    };
 
+    let admin = {
+        __proto__: user,
+        isAdmin: true
+    };
+
+    console.log(admin.fullName);
+
+    admin.fullName = "Utsav Thummar";
+
+    console.log(admin.fullName);
+    console.log(user.fullName);
 
 
 
