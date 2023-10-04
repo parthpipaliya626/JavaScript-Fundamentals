@@ -94,7 +94,7 @@ function countArra (s) {
     }
   }
 
-  let arrr = []
+/*   let arrr = []
   for(let char of str){
     console.log(char);
     if(!arrr[char]){
@@ -105,7 +105,7 @@ function countArra (s) {
       arrr[char] = arrr[char] +1
     }
   }
-  console.log(arrr, "*****************");
+  console.log(arrr, "*****************"); */
 
   newArr.push(newObj);
   console.log(newArr);
