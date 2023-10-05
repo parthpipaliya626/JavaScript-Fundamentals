@@ -62,4 +62,52 @@ console.log(x);                           // Hello Parth Pipaliya is my name
 */
 
 
+/* example - 3  */
+
+// Split Array into chunks in JavaScript
+
+/*
+function chunkArray(myArray, chunkSize) {
+    const results = [];
+    let index = 0;
+    while (index < myArray.length) {
+        results.push(myArray.slice(index, index + chunkSize));
+        index += chunkSize;
+         console.log(index);
+    }
+    return results;
+}
+
+let arrayData = [1, 2, 3, 4, 5, 6];
+console.log(chunkArray(arrayData, 1));       // [ [ 1 ], [ 2 ], [ 3 ], [ 4 ], [ 5 ], [ 6 ] ]
+console.log(chunkArray(arrayData, 2));       // [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ] ]
+console.log(chunkArray(arrayData, 3));       // [ [ 1, 2, 3 ], [ 4, 5, 6 ] ]
+console.log(chunkArray(arrayData, 4));       // [ [ 1, 2, 3, 4 ], [ 5, 6 ] ]
+console.log(chunkArray(arrayData, 5));       // [ [ 1, 2, 3, 4, 5 ], [ 6 ] ]
+console.log(chunkArray(arrayData, 6));       // [ [ 1, 2, 3, 4, 5, 6 ] ]
+console.log(chunkArray(arrayData, 7));       // [ [ 1, 2, 3, 4, 5, 6 ] ]
+
+
+*/
+
+// example - 4
+
+/*
+function chunkArray(myArray, chunkSize) {
+    const results = [];
+    // let index = 0;
+    while (myArray.length) {
+        results.push(myArray.slice(0, chunkSize));
+        myArray = myArray.slice(chunkSize);
+    }
+    return results;
+}
+
+let myArray = [1, 2, 3, 4, 5, 6];
+console.log(chunkArray(myArray, 3));     // [ [ 1, 2, 3 ], [ 4, 5, 6 ] ]
+
+
+
+*/
+
 
