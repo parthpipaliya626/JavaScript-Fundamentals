@@ -29,6 +29,7 @@ console.log(x.split(' ').join(' '));              //   h  ell o
 
 
 
+
 /* example 2 */
 
 
@@ -109,5 +110,26 @@ console.log(chunkArray(myArray, 3));     // [ [ 1, 2, 3 ], [ 4, 5, 6 ] ]
 
 
 */
+
+
+
+let x = "       tttnhnnnjhjn      h   l ll  oooooo )))) *** @@@@@@"
+let y = x.split(' ').join('');
+console.log(y);
+// let z = y.slice(0, 10);
+//     console.log(z);
+
+    
+
+
+
+
+
+
+
+// "tttnhnnnjhjnhllloooooo"
+
+
+
 
 
