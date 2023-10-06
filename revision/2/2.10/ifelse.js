@@ -55,3 +55,45 @@ if (Parth == 2015) {
 
 
 
+//  conndition operator '?'
+
+
+
+// Multiple '?'
+/* 
+let age = 18;
+//  age = 1;
+ age = 100;
+age;
+let message = (age < 3) ? 'Hi, baby!' :
+  (age < 18) ? 'Hello!' :
+  (age < 100) ? 'Greetings!' :
+  'What an unusual age!';
+
+console.log( message );
+ */
+
+/* 
+let age = 18;
+    
+if (age < 3) {
+    message = "hhh";
+} else if (age < 18) {
+    message= "helo";
+} else if (age < 100) {
+    message = "hyyy";
+} else {
+    message = "wow";
+}
+ */
+
+
+// non-traditiona use of '?'
+
+
+let company = 'scaletech';
+
+(company == 'scaletech') ? true : false;
+console.log(company); 
+
+
