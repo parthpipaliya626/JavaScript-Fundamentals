@@ -1,0 +1,14 @@
+/*
+
+Number
+BigInt
+String
+Boolean
+null
+undefined
+Objects and Symbols
+typeof operator
+
+
+
+*/
