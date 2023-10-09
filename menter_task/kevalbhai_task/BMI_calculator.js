@@ -1,9 +1,13 @@
 // BMI Calculator
 
-let weight = a = 90;
-let height = b = 1.65;
+const prompt = require('prompt-sync')({sigint: true});     // terminal exit
+
+
+const weight = a = prompt(' What is your Weight ? ');     // take a weight
+let height = b = prompt(' What is your height? ');      // take a height
+
  
- let BMI = ( a / (b * b) );     // apply BMI operation
+ let BMI = ( a / ((b * b)/10000) );     // apply BMI operation
  console.log(`Your BMI = ${BMI} kg/(m*m)`);   // float full value
       console.log();
  console.log(`Your BMI = ${BMI.toFixed(2)} kg/(m*m)`);     // float first two value
@@ -11,7 +15,7 @@ let height = b = 1.65;
 
 
 // 1.  Switch case statement
-console.log("Use switch case Statement here :  ");
+// console.log("Use switch case Statement here :  ");
 
 
 switch(true) {
@@ -45,26 +49,28 @@ switch(true) {
   
 
 
-console.log();
-// 2.   if else condition
-console.log("Use if else condition here :  ");
+// console.log();
+// // 2.   if else condition
+// console.log("Use if else condition here :  ");
 
 
-   if(BMI < 16) {
-    console.log("Severe Thinness");
-   } else if ( BMI < 17) {
-    console.log("Moderate Thinness");
-   } else if ( BMI < 18.5)  {
-    console.log("Mild Thinness");
-   } else if ( BMI < 25)  {
-    console.log("Normal");
-   } else if ( BMI < 30)  {
-    console.log("Overweight");
-   } else if ( BMI < 35)  {
-    console.log("Obese Class I");
-   } else if ( BMI < 40)  {
-    console.log("Obese Class II");
-   } else if ( BMI > 40) {
-    console.log("Obese Class III");
-   }
+//    if(BMI < 16) {
+//     console.log("Severe Thinness");
+//    } else if ( BMI < 17) {
+//     console.log("Moderate Thinness");
+//    } else if ( BMI < 18.5)  {
+//     console.log("Mild Thinness");
+//    } else if ( BMI < 25)  {
+//     console.log("Normal");
+//    } else if ( BMI < 30)  {
+//     console.log("Overweight");
+//    } else if ( BMI < 35)  {
+//     console.log("Obese Class I");
+//    } else if ( BMI < 40)  {
+//     console.log("Obese Class II");
+//    } else if ( BMI > 40) {
+//     console.log("Obese Class III");
+//    } else {
+
+// }
   

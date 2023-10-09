@@ -14,4 +14,3 @@ function rotation(array, rindex) {
 console.log(rotation(array, rindex));
 
 
-
