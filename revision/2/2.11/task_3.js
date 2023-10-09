@@ -1,19 +1,4 @@
-// let  a = "helllo";
-// let b = "world";
-
-// if (a && b) {
-//     console.log(false);
-// } else {
-//     console.log()
-// }
-
-
-
-
-
-
-
-
+// whats is  the result of AND?
 
 
  console.log(1 || 2 || 3);     /// 1
