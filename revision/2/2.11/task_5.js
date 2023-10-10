@@ -1,3 +1,6 @@
+// The result of OR AND OR
+
+
 console.log(null || 2 && 3 || 4);      // 3
 
 // 2 && 3 = 3 aavse then && method last output aapse 

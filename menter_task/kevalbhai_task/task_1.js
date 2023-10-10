@@ -9,26 +9,37 @@ Output
 ....
 
 */
+
 const array = [1, 2, 3, 4, 5];
 
-  for ( let i = 1; i < array.length + 1; i++) {
-        if (i % 2 == 0) {
-            console.log(`${i} is even`);
-            continue;
+
+
+function array2(array) {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 == 0) {
+            console.log(`${array[i]} is even`);
         } else {
-            console.log(`${i} is odd`);
+            console.log(`${array[i]} is odd`);
         }
-   };
+      }
+};
+
+console.log(array2(array));    
 
 
 
-console.log();     // space maintain
 
+
+/* 
 
 // with turnary operation
-   for ( let i = 1; i < array.length + 1; i++) { 
-    (i % 2 == 0) ? console.log(`${i} is even`) : console.log(`${i} is odd`); 
-    continue;
-   }
+function array3(array) {
 
+    for ( let i = 0; i < array.length; i++) { 
+        (array[i] % 2 == 0) ? console.log(`${array[i]} is even`) : console.log(`${array[i]} is odd`); 
+        continue;
+    } 
+}
+console.log(array3(array));
 
+*/
