@@ -1,7 +1,40 @@
 2. Javascript Fundamentals
 
-6/10/2023   task
+6/10/2023 & 9/10/2023    task 
+BMI_calculator.js
      Create BMI Calculator 
-        - Use if else condition
-        - Use switch case condition
-   
+        - BMI = (weight * ((height * height)/ 10000)) use this 
+           - - Use if else condition
+           - - Use switch case condition
+
+9/10/2023   task 
+odd_evenNumber.js
+        - any number in array 
+        - operation with each index value is odd or even.
+           - - ifelse condition
+
+9/10/2023   task 
+odd_evenCount.js
+        - any number in array
+        - operation with each index odd or even and count total even and odd number and which number is oddcount in and evencount in array number 
+           - - ifelse condition
+
+ 10/10/2023  task
+ guessNum_ifelse.js   
+        - Guess any digit number dynamically.
+        - Guess any number in dynamic digit.
+        -  output is wrong number and check 5 time if guess is wrong.  
+             - - ifelse condition
+
+ 10/10/2023  task
+ guessNum_while.js     
+        - Guess any digit number dynamically.
+        - Guess any number in dynamic digit.
+        - Output is wrong number and check 5 time if guess is wrong.  
+           - - ifelse condition
+
+
+11/10/2023   task
+ calculator.js           
+         - Make a responsive calculator
+           

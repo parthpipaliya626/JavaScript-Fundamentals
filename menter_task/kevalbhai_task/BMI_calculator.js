@@ -76,6 +76,3 @@ console.log("Use if else condition here :  ");
 }
 
 
-
-BMI (1 < 10 ) ? "okk" : "not okk";
-
