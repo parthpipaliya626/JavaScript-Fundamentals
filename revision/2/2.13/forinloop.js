@@ -1,5 +1,7 @@
 // The "for..in" loop
 
+const { keyIn } = require("readline-sync");
+
 let user = {
     name : "Parth",
     age : 30,
@@ -7,7 +9,7 @@ let user = {
 };
 
 for (key in user ) {
-    
+    console.log(key);
 }
 
 

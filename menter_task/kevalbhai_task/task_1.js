@@ -5,6 +5,10 @@ const Num1 = parseInt(+prompt("Enter input number: "));
 const operator = prompt("Enter operator (+, -, *, /): "); 
 const Num2 = parseInt(+prompt("Enter input number: "));
 
+if (Num1 === null && operator === null && Num2 === null) {
+  return;
+}
+
 let result;
 
 if (isNaN(Num1) || isNaN(Num2)) {
