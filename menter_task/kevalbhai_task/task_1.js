@@ -1,57 +1,16 @@
-// calculator
-const prompt = require('prompt-sync')();
+/*
 
-const Num1 = parseInt(+prompt("Enter input number: ")); 
-const operator = prompt("Enter operator (+, -, *, /): "); 
-const Num2 = parseInt(+prompt("Enter input number: "));
+Longest Substring Without Repeating Characters
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3. 
 
-if (Num1 === null && operator === null && Num2 === null) {
-  return;
-}
-
-let result;
-
-if (isNaN(Num1) || isNaN(Num2)) {
-  console.log("Enter valid numbers for Num1 and Num2.");
-} else  if (operator !== '+' && operator !== '-' && operator !== '*' && operator !== '/') {
-  console.log("Enter a valid operator (+, -, *, /).");
-} else {
-          
-        function sum(Num1, Num2) {
-            return  Num1 + Num2;
-          };
-
-        function sub(Num1, Num2) {
-            return Num1 - Num2;
-          };
-
-        function mul(Num1, Num2) {
-            return Num1 * Num2;
-          };
-
-        function div(Num1, Num2) {
-          if (Num2 === 0) {
-            console.log("Division by zero is not allowed.");
-            return undefined;
-          }
-          return Num1 / Num2;
-        };
-  
+*/
 
 
-  if (operator === '+') {
-    result = sum(Num1, Num2);
-  } else if (operator === '-') {
-    result = sub(Num1, Num2);
-  } else if (operator === '*') {
-    result = mul(Num1, Num2);
-  } else if (operator === '/') {
-    result = div(Num1, Num2);
-  } else {
-    console.log("Wrong Operation.");
-  }
-  
-  if (result !== undefined) {
-    console.log(`Result: ${result}`);
-  }
-};
+const s = "abcabcbb";
+
+console.log(s.split());
+ let char = s.forEach(char => {
+    return s.match.char;
+  });

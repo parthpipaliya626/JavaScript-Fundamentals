@@ -1,4 +1,4 @@
-// The "for..in" loop
+/* // The "for..in" loop
 
 const { keyIn } = require("readline-sync");
 
@@ -12,9 +12,15 @@ for (key in user ) {
     console.log(key);
 }
 
+ */
 
 
 
+for (let i = 0; i < 10; i++) {
+    // if true, skip the remaining part of the body
+    if (i % 2 == 0)continue;
+    console.log(i);
+}
 
 
 
