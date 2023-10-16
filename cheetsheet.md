@@ -38,3 +38,27 @@ Additionally:
         Array.isArray(value) checks value for being an array, if so returns true, otherwise false.
 
  ~ Please note that methods sort, reverse and splice modify the array itself.
+
+
+
+
+
+string method
+      slice() method
+                - extract a part of string return the extracted part in a new string. 
+                Note: takes only two parameters. 
+                - syntax 
+                .slice(start position, end position) 
+
+      substring() method
+                - same as slice but not start negetive indexes. only positive to start.
+                  - syntax 
+                  .substring(start position, end position)    
+
+      substr() method
+                - difference the second parameter is start first parameter to length. 
+                - like first (5, 4) then start index 5 to after 4 index return.
+                
+                  - syntax 
+                     .substring(start position, end position)  
+

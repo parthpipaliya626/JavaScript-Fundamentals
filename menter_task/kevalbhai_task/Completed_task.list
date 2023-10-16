@@ -35,6 +35,23 @@ odd_evenCount.js
 
 
 11/10/2023   task
- calculator.js           
+ calculator/calculator_1.js           
          - Make a responsive calculator
-           
+                - - switch case condition
+
+  calculator/calculator_2.js               
+         - Make a responsive calculator
+                - - if else condition
+
+12/10/2023   task
+  calculator/calculator_3.js
+         - update a calculator
+         - Improvement in condition 
+         - make a multitime operation with calculate
+         
+                    
+13/10/2023   task
+  calculator/update_calculator.js
+         - update a calculator
+         - Improvement in condition 
+         - make a multitime operation with calculate                    

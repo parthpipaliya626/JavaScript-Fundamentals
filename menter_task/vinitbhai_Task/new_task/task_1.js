@@ -53,7 +53,7 @@ function hello() {
   }
   
   // // Example usage:
-  // const input = "Abra ka= dabra";
+  // const input = "Abra ka dabra";
   // const result = sortByCount(input);
   // console.log(result);
    */
