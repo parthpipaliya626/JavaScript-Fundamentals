@@ -2,18 +2,17 @@
 
 
 
-let max = 8;
-let pattern = '';
+let max = 9;
+
 for(let i = 1; i <= max; i++) {
-    for(let j = 1; j <= i; j++ ) {
-        pattern += j;
-        // console.log();
-         console.log(j);
+    
+    let pattern = '';
+    for(let j = 1; j <= max ; j++ ) {
+        pattern +=  "* "
     }
-   console.log();
+    console.log(pattern);
 }
-console.log(pattern);
-console.log(pattern.slice(0, ));
+
 
 
 
