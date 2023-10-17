@@ -13,6 +13,8 @@ const height = prompt(' What is your height? ');      // take a height
  console.log(`Your BMI = ${BMI.toFixed(2)} kg/(m*m)`);     // float first two value
      console.log();
 
+
+     
 /* 
 // 1.  Switch case statement
 // console.log("Use switch case Statement here :  ");

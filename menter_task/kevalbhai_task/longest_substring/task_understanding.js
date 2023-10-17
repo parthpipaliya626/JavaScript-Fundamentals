@@ -1,6 +1,6 @@
 // best for understanding how to loop iteration in this task
 
-const s = "abcabcbb";
+const s = "pwwkew";
 let string = s.split(' ').join('');
 console.log("Input : ", string);      //  abcabcbb
 
@@ -27,7 +27,7 @@ function lengthOfLongestSubstring(string) {
             longestSubstring = substring.length;
       }
   }  
-  console.log("longest substring : " , string.slice(0, longestSubstring));           // abc
+  console.log("longest substring : " , substring);           // abc
      return longestSubstring;
 }
 

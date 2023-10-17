@@ -54,4 +54,13 @@ odd_evenCount.js
   calculator/update_calculator.js
          - update a calculator
          - Improvement in condition 
-         - make a multitime operation with calculate                    
+         - make a multitime operation with calculate      
+
+
+16/10/2023    task
+   longest_substring/task_understanding  
+         - Longest substring without repeating characters
+         - output in big substring and length.
+
+   calculator/update_calculator.js
+         - continue;      
