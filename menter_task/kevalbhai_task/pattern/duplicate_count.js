@@ -6,12 +6,12 @@ let array = [1, 2, 3, 1, 2, 3, 4, 1, 4, "@", "@", "@"];
 
 
 
-// example 1 using foreach() method 
+/* // example 1 using foreach() method 
  const arrcount = {};
 
    array.forEach((element) => arrcount[element] = (arrcount[element] || 0) + 1);
    
-console.log( arrcount);
+console.log( arrcount); */
 
 
 
@@ -29,11 +29,11 @@ console.log("each char count : ",count);
 
 // here i use filter method for uniqye array
 
-function removeDuplicates(array) {
+function uniqueElement(array) {
    let unique =  array.filter((item, index) => array.indexOf(item) === index);
    return unique;
 }
-console.log("Unique array : ", removeDuplicates(array));
+console.log("Unique array : ", uniqueElement(array));
 
 
 
@@ -41,12 +41,23 @@ console.log("Unique array : ", removeDuplicates(array));
 
 // example 3: find duplicate element in arrraay
 
-/* let duplicate = [];
-for (let i = 0; i < arry.length; i++) { // nested for loop
-   for (let j = 0; j < arry.length; j++) {
-       if (i !== j) { 
 
-       }
+function findDuplicate(array) {
+   let duplicate = {};
+   let count = {};
+
+   for (let i = 0; i < array.length; i++) { 
+      let element = array[i];
+      
+         if (count[element] == undefined) {
+            count[element] = 1;
+         } else {
+            count[element]++;
+       
+               duplicate[element] = count[element];
+                 
+          }
       }
+      return duplicate;
    }
- */
+console.log("only repeated char count",findDuplicate(array));
