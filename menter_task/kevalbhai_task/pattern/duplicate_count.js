@@ -19,7 +19,7 @@ console.log( arrcount); */
 // example 2  : count each element && unique array 
 
 // here , first we count each element using foreach() method
-
+/* 
 const count = {};
  array.forEach((element) => {
    (count[element] === undefined) ? count[element] = 1 : count[element]++;
@@ -34,9 +34,7 @@ function uniqueElement(array) {
    return unique;
 }
 console.log("Unique array : ", uniqueElement(array));
-
-
-
+ */
 
 
 // example 3: find duplicate element in arrraay
@@ -59,7 +57,7 @@ function findDuplicate(array) {
       // console.log(duplicate);
       return duplicate;
    }
-console.log("only repeated char count",findDuplicate(array));
+console.log("only repeated char count : ",findDuplicate(array));
 
 
 

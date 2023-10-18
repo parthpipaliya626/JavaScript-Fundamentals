@@ -64,3 +64,34 @@ odd_evenCount.js
 
    calculator/update_calculator.js
          - continue;      
+
+
+17/10/2023   task
+     pattern/forloop_pattern.js
+      - Write a JS code to print a pattern using for loop
+            - triangle left to right
+     pattern/remove_sem_char.js
+      - Write a JS code to delete all occurrence of element in given array
+            - delete all same characters.
+     pattern/zero_find_metrix.js
+      - Write a JS code to find the number of zeros in 2D Matrix
+            - skip
+     pattern/duplicate_count.js
+      - Write a JS code to find duplicate values in a given array and give me return value as [{4 : 2 times}]
+            - find duplicate value and count each char
+
+
+18/10/2023   task repeat
+     pattern/forloop_pattern.js
+      - Write a JS code to print a pattern using for loop
+            - triangle left to right
+     pattern/remove_sem_char.js
+      - Write a JS code to delete all occurrence of element in given array
+            - delete all same characters.
+     pattern/zero_find_metrix.js
+      - Write a JS code to find the number of zeros in 2D Matrix
+            - skip
+     pattern/duplicate_count.js
+      - Write a JS code to find duplicate values in a given array and give me return value as [{4 : 2 times}]
+            - find duplicate value and count each char
+
