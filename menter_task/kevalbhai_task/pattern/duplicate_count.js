@@ -53,11 +53,20 @@ function findDuplicate(array) {
             count[element] = 1;
          } else {
             count[element]++;
-       
-               duplicate[element] = count[element];
-                 
+            duplicate[element] = count[element];        
           }
       }
+      // console.log(duplicate);
       return duplicate;
    }
 console.log("only repeated char count",findDuplicate(array));
+
+
+
+
+
+
+
+
+
+
