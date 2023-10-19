@@ -62,6 +62,26 @@ console.log("only repeated char count : ",findDuplicate(array));
 
 
 
+function findDuplicateValues(arr) {
+   let count = {};
+   let result = [];
+   arr.forEach((num) => {
+     count[num] = (count[num] || 0) + 1;
+   });
+   for (let key in count) {
+     if (count[key] > 1) {
+       result.push({[key]: `${count[key]} times`});
+     }
+   }
+   return result;
+ }
+ 
+ const arr = [1, 2, 3, 4, 4, 5, 6, 7, 7, 8];
+ console.log(findDuplicateValues(arr));
+ 
+
+
+
 
 
 

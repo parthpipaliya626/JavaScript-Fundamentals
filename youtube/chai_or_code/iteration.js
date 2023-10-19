@@ -1,10 +1,10 @@
-// const friends = ["raju", "Utsav", "Krunal", "Parth"];
+const friends = ["raju", "Utsav", "Krunal", "Parth"];
 
-// const values = friends.forEach((item) => {
-//     // console.log(item);
-//     return item;
-// });
-// console.log(values);
+const values = friends.forEach((item) => {
+    console.log(item);
+    //  return item;
+});
+console.log(values);
 
 
 
@@ -42,3 +42,17 @@ console.log(score);
 const balance = new String(100);
 console.log(balance);
 // console.log
+
+
+
+
+
+
+
+
+
+
+
+
+
+
