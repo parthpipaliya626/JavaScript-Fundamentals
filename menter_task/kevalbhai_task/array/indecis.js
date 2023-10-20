@@ -18,7 +18,22 @@ let target = 9;
 // target = 18;
 target = 22;
 
+for (let i = 0; i <= nums.length; i++) {
+  for (let j = 0; j <= nums.length; j++) {
+    // if ( (target - nums[i] === nums[j]) && (nums[i] != nums[j]) ) {
+    if ( (nums[i] + nums[j] === target) && (nums[i] != nums[j]) )  {
+     let output = [i, j];
+     console.log(output);
+     return output ;
+    }  
+  }
+}
 
+
+// make a function to easy use
+
+ /* 
+ 
  let output = function (nums, target) {
           for (let i = 0; i <= nums.length; i++) {
             for (let j = 0; j <= nums.length; j++) {
@@ -32,3 +47,21 @@ target = 22;
  }
 
 console.log(output(nums, target));
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
