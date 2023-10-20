@@ -11,17 +11,20 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
 */
 
-let nums = [2,7,11,15];
-let target = 17;
-target = 17;
-target = 9;
+let nums = [2,7,11,15, "a", "b"];
+let target = 9;
+// target = 13;
+// target = 17;
+// target = 18;
+target = 22;
 
 
  let output = function (nums, target) {
           for (let i = 0; i <= nums.length; i++) {
             for (let j = 0; j <= nums.length; j++) {
-            //   if ( nums[i] + nums[j] === target) {
-              if ( target - nums[i] === nums[j]) {
+              // if ( (target - nums[i] === nums[j]) && (nums[i] != nums[j]) ) {
+              if ( (nums[i] + nums[j] === target) && (nums[i] != nums[j]) )  {
+    
                return [i, j]
               }  
             }
