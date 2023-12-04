@@ -15,5 +15,5 @@ function sumAll(arr) {
    
 }
 
-let arr = [1,3];
+let arr = [1,5];
 console.log(sumAll(arr));
