@@ -118,7 +118,11 @@ odd_evenCount.js
 
 
 medical leave 23/10/2023 to 1/12/2023
-     sergery operation
+     sergery operation of right hand shoulder.
+
+
+
+start new year after diwali 
 
 
 04/12/2023   task
@@ -127,3 +131,9 @@ medical leave 23/10/2023 to 1/12/2023
           FreeCodeCamp/Intermediate_algo_scripting/sum.js
           - three type of solution on sum if all numbers in a range.
           
+          pattern/remove_sem_char.js
+           - Write a JS code to delete all occurrence of element in given array
+            - delete all same characters.
+  
+  
+
