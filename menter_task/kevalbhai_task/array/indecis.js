@@ -60,14 +60,13 @@ console.log(output(nums, target));
 // example 3 : with only one loop iteration possible 
  
    let nums = [2, 7, 11, 15]
-  let target = 14;
+  let target = 13;
 
   let output = function (nums, target) {
     
     for (let i = 0; i <= nums.length; i++) { 
       let nums2 = target - nums[i];
    
-      
           if ( nums.includes(nums2) ) {
           let result = nums.indexOf(nums2)
           return [i, result] 
