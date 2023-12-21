@@ -65,3 +65,12 @@ function diffArray(arr1,arr2) {
 }
 console.log(diffArray(arr1, arr2));
 
+
+
+
+
+
+
+
+
+
