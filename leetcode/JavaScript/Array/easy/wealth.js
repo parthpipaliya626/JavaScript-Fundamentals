@@ -1,3 +1,6 @@
+// 1672
+// Richest Customer Wealth
+
 let accounts = [[1,2,3],[3,2,1]];
 
 const sum = (arr) => {

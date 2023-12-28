@@ -19,7 +19,8 @@ const peoples = [
 ];
 
 const oldAge = peoples.reduce((a, b) => {
-      
+      let high =  age(a) > age(b);
+      console.log(high);
 }); 
 console.log(oldAge);
 

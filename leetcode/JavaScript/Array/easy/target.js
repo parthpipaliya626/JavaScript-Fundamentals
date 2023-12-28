@@ -1,8 +1,11 @@
+// 2798
+// Number of Employees who met the target
+
+
+
 const hours = [0,1,2,3,4];
 const target = 2;
-// n employees like 0 to n - 1;                                                                                                        
-
-
+                                                                                                    
  let n = 0;    
 var numberOfEmployeesWhoMetTarget = function(hours, target) {
     let count = 0;

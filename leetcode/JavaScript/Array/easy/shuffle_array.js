@@ -1,3 +1,4 @@
+//  1470
 //  given array nums consisting of 2n elements in the form [x1, x2, ...,xn,y1,y2,...,yn].
 // return the array in the form [x1,y1,x2,y2,...,xn,yn].
 
