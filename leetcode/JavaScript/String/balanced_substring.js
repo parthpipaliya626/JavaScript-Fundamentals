@@ -10,7 +10,7 @@ var balancedStringSplit = function(s) {
     let countBalanced = 0;
     for (let i = 0; i < s.length; i++) {
            for(let j = 0; j < s.length; j++) {     
-            s[i] === "L" ? count++ : count--;
+            s[i] === "R" ? count++ : count--;
             if(count == 0) {
                 countBalanced++
             }
@@ -23,6 +23,7 @@ var balancedStringSplit = function(s) {
 console.log(balancedStringSplit(s));
 
 
+// find duplicate value
 const number = [1, 2, 3, 4, 2, 3, 1, 8, 7];
 const duplicates = number.filter((ele, index, arr) => arr.indexOf(ele) !== index);
 console.log(duplicates);
