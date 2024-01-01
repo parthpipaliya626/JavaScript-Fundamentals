@@ -23,4 +23,8 @@ var balancedStringSplit = function(s) {
 console.log(balancedStringSplit(s));
 
 
+const number = [1, 2, 3, 4, 2, 3, 1, 8, 7];
+const duplicates = number.filter((ele, index, arr) => arr.indexOf(ele) !== index);
+console.log(duplicates);
+
 
